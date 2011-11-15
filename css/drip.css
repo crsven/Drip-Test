@@ -1,0 +1,40 @@
+/*====DRIP.CSS====*/
+@-webkit-keyframes drip {
+  0% {
+    background-position: 5px -4px, -5px -4px, 0 0, 0 -250px;
+  }
+
+  50% {
+    background-position: 5px -4px, -5px -4px, 0 0, 0 -230px;
+  }
+
+  100% {
+    background-position: 5px -4px, -5px -4px, 0 0, 0 115px;
+  }
+}
+
+.drip {
+  -webkit-animation-name: drip;
+  -webkit-animation-duration: 3s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-in;
+  background-color: #fff;
+  background-image:
+    -webkit-radial-gradient(top left, white 20px, transparent 20px),
+    -webkit-radial-gradient(top right, white 20px, transparent 20px),
+    -webkit-radial-gradient(top center, red 15px, transparent 15px),
+    -webkit-radial-gradient(center, red 45%, white 45%)
+  ;
+  /* background-position: 5px -4px, -5px -4px, 0 0, 0 -25px;*/
+  background-repeat: no-repeat;
+  float: left;
+  height: 500px;
+  margin-right: 50px;
+  /* -webkit-transition-property: background-position, background-image;*/
+  /* -webkit-transition-duration: .5s;*/
+  width: 50px;
+}
+
+.dropping {
+  background-position: 5px -4px, -5px -4px, 0 0, 0 1px;
+}
